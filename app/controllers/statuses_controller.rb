@@ -3,13 +3,12 @@ class StatusesController < ApplicationController
     @status = current_user.statuses.build(status_params)
     if @status.save
       flash[:success] = "Micropost created!"
-      redirect_to profile_path
-      # respond_to do |format|
-      #   format.html { }
-      #   format.js
-      # end
+      respond_to do |format|
+        format.html { redirect_to profiles_path }
+        format.js
+      end
     else
-      redirect_to profile_path
+      redirect_to profiles_path
     end
 
   end

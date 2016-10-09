@@ -1,15 +1,23 @@
 .top-header
-  p MYSTATUS APP
+  span MYSTATUS APP
+  .pull-right
+   span = link_to 'Logout', destroy_user_session_path, :method => :delete
 .container
  .row
   .col-md-2.random-user
    h2 Top user
-   p Michel
+   - User.all.each do |profile|
+    p = link_to profile.temp_name, profile_path(profile.id)
+
   .col-md-7.left-section
-   h2 Status
+   h2#test Status
    = render 'shared/status'
+   .feed-area
+     = render partial: 'feed', collection: @feeds
+
+
   .col-md-3.right-section
-   h1 Nam : QUyen VInh Xuan
+   h1 Nam : #{current_user.temp_name}
    p Follower
    p Following
    p All user
