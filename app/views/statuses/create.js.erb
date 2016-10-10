@@ -1,3 +1,3 @@
-$('.feed-area').append("<%= j render(:partial => 'profiles/feed', locals: { feed: @status} )%>");
+$('.feed-area').prepend("<%= j render(:partial => 'profiles/feed', locals: { feed: @status} )%>");
 alert('success');
 // $('#test').hide();

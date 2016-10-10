@@ -1,0 +1,4 @@
+  .col-md-2.random-user
+   h2 Top user
+   - User.all.each do |profile|
+    p = link_to profile.temp_name, profile_path(profile.id)
