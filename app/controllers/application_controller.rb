@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(users)
     profiles_path
   end
+
+  def current_user?(other_user)
+     current_user == other_user
+  end
 end

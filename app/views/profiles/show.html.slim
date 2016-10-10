@@ -1,0 +1,19 @@
+= render 'layouts/header'
+.container
+ .row
+  .col-md-2.random-user
+   h2 Top user
+   - User.all.each do |profile|
+    p = link_to profile.temp_name, profile_path(profile.id)
+
+  .col-md-7.left-section
+   h2#test Status
+   .feed-area
+     = render partial: 'feed', collection: @feeds
+
+
+  .col-md-3.right-section
+   h1 Profile #{@profile.temp_name}
+   = render 'shared/followcount', user: @profile
+   = render 'shared/form_follow'
+

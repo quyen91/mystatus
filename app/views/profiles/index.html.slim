@@ -1,13 +1,8 @@
-.top-header
-  span MYSTATUS APP
-  .pull-right
-   span = link_to 'Logout', destroy_user_session_path, :method => :delete
+= render 'layouts/header'
+
 .container
  .row
-  .col-md-2.random-user
-   h2 Top user
-   - User.all.each do |profile|
-    p = link_to profile.temp_name, profile_path(profile.id)
+  = render 'layouts/left_bar'
 
   .col-md-7.left-section
    h2#test Status
@@ -17,8 +12,5 @@
 
 
   .col-md-3.right-section
-   h1 Nam : #{current_user.temp_name}
-   p Follower
-   p Following
-   p All user
-   p Search user
+   h1 Profile #{current_user.temp_name}
+   = render 'shared/followcount'

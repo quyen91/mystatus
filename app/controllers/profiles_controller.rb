@@ -7,5 +7,6 @@ class ProfilesController < ApplicationController
   end
   def show
     @profile = User.find(params[:id])
+    @feeds = @profile.statuses
   end
 end

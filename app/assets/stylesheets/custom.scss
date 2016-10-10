@@ -16,3 +16,30 @@ body{
   border-right: solid 1px black;
 
 }
+.feed-item{
+  // border
+   -webkit-box-shadow: -5px -4px 15px -6px rgba(199,195,199,1);
+    -moz-box-shadow: -5px -4px 15px -6px rgba(199,195,199,1);
+    box-shadow: -5px -4px 15px -6px rgba(199,195,199,1);
+   margin-bottom: 20px;
+   padding: 20px;
+
+  .top-item{
+    display: inline-block;
+    .avatar{
+      float: left;
+      img {
+        height: 50px;
+        width: 50px;
+      }
+     }
+    .name{
+      float: left;
+      margin-left: 10px;
+      h4{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
