@@ -1,7 +1,8 @@
 - user ||= current_user
 
 = link_to following_profile_path(user) do
-  p Following(#{user.following.count})
+  #follower
+   p Following(#{user.following.count})
 
 = link_to followers_profile_path(user) do
   p Follower(#{user.followers.count})

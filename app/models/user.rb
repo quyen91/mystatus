@@ -15,8 +15,8 @@ class User < ApplicationRecord
 
 
 
-  def feed(user_id)
-
+  def feed
+    Status.where("user_id IN (?) OR user_id = ?", following_ids, id)
   end
 
   def temp_name
