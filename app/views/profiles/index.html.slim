@@ -1,0 +1,16 @@
+= render 'layouts/header'
+
+.container
+ .row
+  = render 'layouts/left_bar'
+
+  .col-md-7.left-section
+   h2#test Status
+   = render 'shared/status'
+   .feed-area
+     = render partial: 'feed', collection: @feeds
+
+
+  .col-md-3.right-section
+   h1 Profile #{current_user.temp_name}
+   = render 'shared/followcount'

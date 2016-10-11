@@ -1,0 +1,13 @@
+.top-header
+  .app-title
+    span MYSTATUS APP
+
+  .pull-right
+     .homepage
+       span = link_to 'Home', root_url
+     .about-app
+       span About
+     .user-name
+        span = current_user.temp_name
+     .auth-action
+       span = link_to 'Logout', destroy_user_session_path, :method => :delete

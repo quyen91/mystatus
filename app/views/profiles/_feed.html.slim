@@ -1,0 +1,24 @@
+.feed-item
+  .top-item
+    .avatar
+      - if feed.user_id == current_user.id
+        = image_tag "12.png"
+      - else
+        = image_tag "cur.png"
+
+
+    .name
+      h4 #{feed.writer}
+      span.small #{feed.created_at}
+  .status-content
+    p = feed.content
+  .comment
+    .write-comment
+     .avatar-comment
+       = image_tag "12.png"
+     .box
+       = render 'comments/form', id: feed.id
+    .list-comment
+      - feed.comments.each do |comment|
+        = render 'comments/comment_item', comment: comment
+
