@@ -1,10 +1,7 @@
 = render 'layouts/header'
 .container
  .row
-  .col-md-2.random-user
-   h2 Top user
-   - User.all.each do |profile|
-    p = link_to profile.temp_name, profile_path(profile.id)
+  = render 'layouts/left_bar'
 
   .col-md-7.left-section
    h2#test Status
