@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   root to: 'profiles#index'
   devise_for :users, controllers: { sessions: "users/sessions", registrations: 'users/registrations',
                                    confirmations: 'users/confirmations', passwords: 'users/passwords',
-                                   :omniauth_callbacks "callbacks" }
+                                  }
+
+   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+
 
   resources :profiles, only: [:index, :show] do
     member do

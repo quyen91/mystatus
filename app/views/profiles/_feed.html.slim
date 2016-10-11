@@ -13,11 +13,12 @@
   .status-content
     p = feed.content
   .comment
-   .write-comment
+    .write-comment
      .avatar-comment
        = image_tag "12.png"
      .box
-       = render 'comments/form'
-
-   .list-comment
+       = render 'comments/form', id: feed.id
+    .list-comment
+      - feed.comments.each do |comment|
+        = render 'comments/comment_item', comment: comment
 

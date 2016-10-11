@@ -1,4 +1,7 @@
   .col-md-2.random-user
    h2 Top user
    - User.all.each do |profile|
-    p = link_to profile.temp_name, profile_path(profile.id)
+    .small-icon
+       = image_tag "cur.png"
+    .name-user-random
+      p = link_to profile.temp_name, profile_path(profile.id)

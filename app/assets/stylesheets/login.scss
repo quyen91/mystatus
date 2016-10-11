@@ -1,0 +1,16 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.welcome{
+  margin-top: 60px;
+  background: rgba(10, 209, 56, 0.78);
+  height: 500px;
+  color: white;
+}
+.login-area{
+  margin-top: 60px;
+ // border
+   -webkit-box-shadow: -5px -4px 15px -6px rgba(199,195,199,1);
+    -moz-box-shadow: -5px -4px 15px -6px rgba(199,195,199,1);
+    box-shadow: -5px -4px 15px -6px rgba(199,195,199,1);
+}
