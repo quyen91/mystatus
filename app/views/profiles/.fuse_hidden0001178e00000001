@@ -1,0 +1,10 @@
+.feed-item
+  .top-item
+    .avatar
+      = image_tag "12.png"
+    .name
+      h4 #{feed.writer}
+      span.small #{feed.created_at}
+  .status-content
+    p = feed.content
+  .comment

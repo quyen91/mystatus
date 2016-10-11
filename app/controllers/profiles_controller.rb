@@ -3,9 +3,12 @@ class ProfilesController < ApplicationController
   def index
     # @status = current_user.statuses.build
     @status = Status.new
+    @comment = Comment.new
     @feeds = current_user.feed.order('created_at DESC')
   end
   def show
+
+    @comment = Comment.new
     @profile = User.find(params[:id])
     @feeds = @profile.statuses
   end
