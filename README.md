@@ -40,9 +40,9 @@ Danh sách chức năng **thêm** đã làm nhưng chưa được liệt kê ở
 
 Quy trình sử dụng [GIT Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/)
 * [ ] Git với Centralize Workflow (chỉ có duy nhất nhánh master)
-* [ ] Git theo Feature Branch Workflow (mỗi chức năng sẽ được làm trên 1 nhánh riêng)
-* [ ] Git theo Gitflow Workflow (Có các nhánh develop, master, test,...)
-* [ ] Có sử dụng tag, pull requests
+* [x ] Git theo Feature Branch Workflow (mỗi chức năng sẽ được làm trên 1 nhánh riêng)
+* [ x] Git theo Gitflow Workflow (Có các nhánh develop, master, test,...)
+* [ x] Có sử dụng tag, pull requests
 
 ## Video Walkthrough
 
